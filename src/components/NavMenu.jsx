@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './styles.css';
 
 
-function NavMenu({ skillsRef, projectRef, footerRef }) {
+function NavMenu({ skillsRef, projectRef, footerRef, navRef  }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleScrollToSection = (ref) => {
@@ -19,7 +19,7 @@ function NavMenu({ skillsRef, projectRef, footerRef }) {
     };
 
     return (
-        <div id='header'>
+        <div id='header' ref={navRef}>
             <h1 className='title-bnr'>Rodel</h1>
             <nav>
 

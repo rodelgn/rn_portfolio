@@ -3,6 +3,7 @@ import './styles.css';
 
 
 const Footer = forwardRef (( props, ref ) => {
+    const { navRef } = props;
     const [isVisible, setIsVisible] = useState(false);
 
     React.useEffect(() => {
@@ -17,6 +18,15 @@ const Footer = forwardRef (( props, ref ) => {
             return () => observer.disconnect();
         }
     }, [ref]);
+
+    const handleScrollToSection = (ref) => {
+        if (ref && ref.current) {
+            ref.current.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start' 
+            });
+        }
+    };
 
     return (
         <div ref={ref} className={`footerContainer ${isVisible ? 'fade-in' : 'fade-out'}`}>
@@ -39,13 +49,16 @@ const Footer = forwardRef (( props, ref ) => {
             <div>
                 <ul className="mediaContainer">
                     {/* <li className='link'><i className="fa fa-envelope" style={{ marginRight: '3px' }}></i> rodelg.nercuit@gmail.com</li> */}
-                    <li className='link'><a href="https://github.com/rodelgn"><i className="fab fa-github" style={{ color: 'red', fontSize: '24px', marginRight: '6px' }}></i>GitHub</a></li>
-                    <li className='link'><a href="https://www.linkedin.com/in/rodel-jr-nercuit-7395b5195/"><i className="fab fa-linkedin" aria-hidden="true" style={{ fontSize: '24px', color: 'red', marginRight: '6px' }}></i>LinkedIn</a></li>
-                    <li className='link'>Resume</li>
+                    <li><a className='link' href="https://github.com/rodelgn"><i className="fab fa-github" style={{ color: 'red', fontSize: '26px', marginRight: '6px' }}></i>GitHub</a></li>
+                    <li><a className='link' href="https://www.linkedin.com/in/rodel-jr-nercuit-7395b5195/"><i className="fab fa-linkedin" aria-hidden="true" style={{ fontSize: '26px', color: 'red', marginRight: '6px' }}></i>LinkedIn</a></li>
+                    <li><a className='link'>Resume</a></li>
                 </ul>
             </div>
             <div className='to-top'>
-            <button className='to-top-btn'><i className="fa fa-angle-double-up" aria-hidden="true"></i></button>
+            <button className='to-top-btn' onClick={() => handleScrollToSection(navRef)}>
+                <i className="fa fa-angle-double-up" aria-hidden="true"></i>
+                <span className="tooltip-text">Scroll Top</span>
+            </button>
             </div>
             <p className="rodel-ftr">Rodel Nercuit &copy; {(new Date().getFullYear())}</p>
         </div>

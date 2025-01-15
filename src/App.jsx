@@ -10,6 +10,7 @@ function App() {
   const skillsRef = useRef(null);
   const projectRef = useRef(null);
   const footerRef = useRef(null);
+  const navRef = useRef(null);
 
   return (
     <div>
@@ -17,6 +18,7 @@ function App() {
       skillsRef={skillsRef}
       projectRef={projectRef}
       footerRef={footerRef}
+      navRef={navRef}
       />
       <About />
       <Skills ref={skillsRef} />
@@ -24,7 +26,10 @@ function App() {
         ref={projectRef}
         projects={cards}
       />
-      <Footer ref={footerRef} />
+      <Footer 
+      ref={footerRef}
+      navRef={navRef}
+       />
     </div>
   );
 };
