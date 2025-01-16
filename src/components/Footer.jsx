@@ -38,8 +38,8 @@ const Footer = forwardRef (( props, ref ) => {
                     <input type="text" placeholder='Name'/>
                     <label>Email</label>
                     <input type="text" placeholder='Email'/>
-                    <label>Company</label>
-                    <input type="text" placeholder='Company'/>
+                    {/* <label>Company</label>
+                    <input type="text" placeholder='Company'/> */}
                     <label>Message:</label>
                     <textarea placeholder="Enter Message" rows="4" cols="50" defaultValue=""></textarea>
                     <button type='submit'>Send Message</button>

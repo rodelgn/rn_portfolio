@@ -48,8 +48,10 @@ const Projects = forwardRef (( { projects  }, ref ) => {
                     </div>
                 </div>
 
+                <div className='navigation-btn'>
                 <button className='nav-btn' onClick={handlePrevious}><i className='fas fa-angle-left'></i></button>
                 <button className='nav-btn' onClick={handleNext}><i className='fas fa-angle-right'></i></button>
+                </div>
             </div>
         </div>
     );
