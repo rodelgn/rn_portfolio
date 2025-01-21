@@ -350,6 +350,20 @@ body {
     position: relative;
 }
 
+.project-section .card1 {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+    transform: translateX(0);
+}
+.project-section .card1.fade-out {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+.project-section .card1.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .card1 {
     display: flex;
     flex-wrap: wrap;
@@ -357,6 +371,16 @@ body {
     justify-content: center;
     align-items: center;
 }
+.card1.fade-out-left {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.card1.fade-out-right {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
 .card1 img {
     height: 300px;
     width: 400px;

@@ -4,6 +4,8 @@ import './styles.css';
 const Projects = forwardRef (( { projects  }, ref ) => {
     const [isVisible, setIsVisible] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isTransitioning, setIsTransitioning] = useState(false);
+    const [isNext, setIsNext] = useState(true);
     
     React.useEffect(() => {
         if (ref && ref.current) {
@@ -19,13 +21,24 @@ const Projects = forwardRef (( { projects  }, ref ) => {
     }, [ref]);
 
     const handleNext = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
+        setIsNext(true);
+        setIsTransitioning(true);
+         setTimeout(() => {
+         setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
+         setIsTransitioning(false);
+    }, 300);
+
     };
 
     const handlePrevious = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex === 0 ? projects.length - 1 : prevIndex - 1
-        );
+        setIsNext(false);
+        setIsTransitioning(true);
+         setTimeout(() => {
+         setCurrentIndex((prevIndex) =>
+             prevIndex === 0 ? projects.length - 1 : prevIndex - 1
+         );
+         setIsTransitioning(false);
+    }, 300);
     };
 
     const currentProject = projects[currentIndex];
@@ -35,7 +48,7 @@ const Projects = forwardRef (( { projects  }, ref ) => {
             <div className='project-ctn'>
                 <h1 className='title'>Projects</h1>
 
-                <div className='card1'>
+                <div className={`card1 ${isTransitioning ? (isNext ? 'fade-out-right' : 'fade-out-left') : 'fade-in'}`}>
                     <img src={currentProject.image} alt={currentProject.alt} />
                     <div className='card-content'>
                     <h1>{currentProject.title}</h1>
