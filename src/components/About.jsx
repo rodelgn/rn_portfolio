@@ -3,6 +3,14 @@ import './styles.css';
 
 function About() {
 
+    const downloadButton = () => {
+        const link = document.createElement('a');
+        link.href = "src/assets/file/Rodel_Nercuit-CV.pdf";
+        link.download = "Rodel_Nercuit-CV.pdf";
+        link.click();
+        // console.log("Download CV");
+    };
+
     return (
         <div className="aboutBody">
             <div className="note">
@@ -15,7 +23,7 @@ function About() {
                 Labore odit est officiis quasi tempora eaque obcaecati!
                 </p>
 
-                <button>Download CV <i className="fa fa-download"></i></button>
+                <button onClick={downloadButton}>Download CV <i className="fa fa-download"></i></button>
             </div>
 
             <div className="img-container">
