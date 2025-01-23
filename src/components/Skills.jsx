@@ -35,7 +35,7 @@ const Skills = forwardRef(( props, ref ) => {
                     <li>Leaflet</li>
                     <li>PostgreSQL</li>
                     <li>MongoDB</li>
-                    <li>RESTfulAPI</li>
+                    <li>REST API</li>
                     <li>Git/GitHub</li>
                 </ul>
             </div>
