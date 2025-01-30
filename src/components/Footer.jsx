@@ -30,7 +30,7 @@ const Footer = forwardRef (( props, ref ) => {
 
     const downloadButton = () => {
         const link = document.createElement('a');
-        link.href = "src/assets/file/Rodel_Nercuit-CV.pdf";
+        link.href = "/file/Rodel_Nercuit-CV.pdf";
         link.download = "Rodel_Nercuit-CV.pdf";
         link.click();
         // console.log("Download CV");
@@ -59,7 +59,7 @@ const Footer = forwardRef (( props, ref ) => {
                     {/* <li className='link'><i className="fa fa-envelope" style={{ marginRight: '3px' }}></i> rodelg.nercuit@gmail.com</li> */}
                     <li><a className='link' href="https://github.com/rodelgn"><i className="fab fa-github" style={{ color: 'red', fontSize: '26px', marginRight: '6px' }}></i>GitHub</a></li>
                     <li><a className='link' href="https://www.linkedin.com/in/rodel-jr-nercuit-7395b5195/"><i className="fab fa-linkedin" aria-hidden="true" style={{ fontSize: '26px', color: 'red', marginRight: '6px' }}></i>LinkedIn</a></li>
-                    <li><a className='link' href="" onClick={downloadButton}>Resume</a></li>
+                    <li><a className='link' style={{ cursor: 'pointer' }} onClick={downloadButton}>Resume</a></li>
                 </ul>
             </div>
             <div className='to-top'>
