@@ -4,7 +4,7 @@ import About from './components/About';
 import Skills from './components/Skills'
 import Footer from './components/Footer';
 import Projects from './components/Projects';
-import cards from './components/project-card'
+import cards from './components/hooks/project-card'
 
 function App() {
   const skillsRef = useRef(null);

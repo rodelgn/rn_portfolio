@@ -28,7 +28,7 @@ function About() {
 
             <div className="img-container">
                 <div className="border-rotating">
-                    <img className="me-img" src="/img/rodel_img.png" alt="rodel-picture" />
+                    <img className="me-img" src="/image/rodel_img.png" alt="rodel-picture" />
                 </div>
             </div>
 
