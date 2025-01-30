@@ -18,9 +18,9 @@ function About() {
                 <h1>Rodel Nercuit</h1>
                 <h2>Web Developer</h2>
                 <p> 
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                Quo sed laboriosam, ullam temporibus fugiat sequi at, nam, doloremque eveniet vel voluptas nisi. 
-                Labore odit est officiis quasi tempora eaque obcaecati!
+                A passionate Web Developer who transitioned into tech to pursue my dream career. 
+                I focus on creating user-friendly and efficient web applications, 
+                combining creativity and problem-solving to deliver impactful digital solutions.
                 </p>
 
                 <button onClick={downloadButton}>Download CV <i className="fa fa-download"></i></button>

@@ -31,14 +31,16 @@ body {
     align-items: center;
     animation: fadeIn 1.8s ease-in-out;
 }
-#header h1 {
+/* #header h1 {
     flex-grow: 1;
-    font-size: 2rem;
-}
+    font-size: 3rem;
+} */
 .title-bnr {
     color: #FF2929;
     font-family: "Charmonman", serif;
     font-weight: 700;
+    /* flex-grow: 1; */
+    font-size: 3rem;
 }
 
 #Nav {
