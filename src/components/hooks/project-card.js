@@ -1,7 +1,9 @@
+import SimonGame from '../../assets/image/Simon-Game.png';
+
 const cards = [
     {
         id: 1,
-        image: '/src/assets/image/Simon-Game.png',
+        image: SimonGame,
         title: 'Simon Game',
         alt: 'Simon-Game',
         link: 'https://rodelgn.github.io/Simon-Game/',

@@ -1,5 +1,6 @@
 import React, { useState, forwardRef } from 'react';
 import './styles.css';
+import Rodel_CV from '/src/assets/file/Rodel_Nercuit-CV.pdf';
 
 
 const Footer = forwardRef (( props, ref ) => {
@@ -30,7 +31,7 @@ const Footer = forwardRef (( props, ref ) => {
 
     const downloadButton = () => {
         const link = document.createElement('a');
-        link.href = "/src/assets/file/Rodel_Nercuit-CV.pdf";
+        link.href = Rodel_CV;
         link.download = "Rodel_Nercuit-CV.pdf";
         link.click();
         // console.log("Download CV");
