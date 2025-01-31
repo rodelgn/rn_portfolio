@@ -30,7 +30,7 @@ const Footer = forwardRef (( props, ref ) => {
 
     const downloadButton = () => {
         const link = document.createElement('a');
-        link.href = "/file/Rodel_Nercuit-CV.pdf";
+        link.href = "/src/assets/file/Rodel_Nercuit-CV.pdf";
         link.download = "Rodel_Nercuit-CV.pdf";
         link.click();
         // console.log("Download CV");
