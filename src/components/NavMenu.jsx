@@ -31,7 +31,7 @@ function NavMenu({ skillsRef, projectRef, footerRef, navRef  }) {
 
                 <ul id='Nav' className={isMenuOpen ? 'open' : ''}>
 
-                    <li><a href="#" className='link'>Home</a></li>
+                    <li><a href="/" className='link'>Home</a></li>
 
                     <li>
                         <a href="#" className='link' onClick={() => handleScrollToSection(skillsRef)}>Skills</a>
