@@ -1,11 +1,13 @@
 import React from "react";
 import './styles.css';
+import rodel_img from '/src/assets/image/rodel_img.png';
+import Rodel_CV from '/src/assets/file/Rodel_Nercuit-CV.pdf';
 
 function About() {
 
     const downloadButton = () => {
         const link = document.createElement('a');
-        link.href = "/src/assets/file/Rodel_Nercuit-CV.pdf";
+        link.href = Rodel_CV;
         link.download = "Rodel_Nercuit-CV.pdf";
         link.click();
         // console.log("Download CV");
@@ -28,7 +30,7 @@ function About() {
 
             <div className="img-container">
                 <div className="border-rotating">
-                    <img className="me-img" src="/src/assets/image/rodel_img.png" alt="rodel-picture" />
+                    <img className="me-img" src={rodel_img} alt="rodel-picture" />
                 </div>
             </div>
 
