@@ -1,5 +1,6 @@
 import React from "react";
 import './styles.css';
+import rodel_img from '/src/assets/image/rodel_img.png';
 
 function About() {
 
@@ -28,7 +29,7 @@ function About() {
 
             <div className="img-container">
                 <div className="border-rotating">
-                    <img className="me-img" src="/src/assets/image/rodel_img.png" alt="rodel-picture" />
+                    <img className="me-img" src={rodel_img} alt="rodel-picture" />
                 </div>
             </div>
 
