@@ -1,7 +1,7 @@
 const cards = [
     {
         id: 1,
-        image: '/image/Simon-Game.png',
+        image: '/src/assets/image/Simon-Game.png',
         title: 'Simon Game',
         alt: 'Simon-Game',
         link: 'https://rodelgn.github.io/Simon-Game/',
