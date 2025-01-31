@@ -55,8 +55,8 @@ const Projects = forwardRef (( { projects  }, ref ) => {
                     <p>{currentProject.paragraph}</p>
 
                     <div className='btn-proj'>
-                    <button className='lrn-more' style={{ borderRadius: '100px' }}><i className="fa fa-link" style={{ fontSize: '21px' }}></i></button>
-                    <button className='lrn-more' style={{ borderRadius: '100px' }}><i className="fab fa-github" style={{ color: 'black', fontSize: '26px' }}></i></button>
+                    <a className='lrn-more' href={currentProject.link} style={{ borderRadius: '100px' }}><i className="fa fa-link" style={{ fontSize: '21px' }}></i></a>
+                    <a className='lrn-more' href={currentProject.githubLink} style={{ borderRadius: '100px' }}><i className="fab fa-github" style={{ color: 'black', fontSize: '26px' }}></i></a>
                     </div>
                     </div>
                 </div>

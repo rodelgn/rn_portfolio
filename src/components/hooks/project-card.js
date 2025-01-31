@@ -1,9 +1,11 @@
 const cards = [
     {
         id: 1,
-        image: 'https://thumbs.dreamstime.com/b/illustration-majestic-elephant-standing-lush-savannah-trees-birds-beautiful-landscape-green-flying-clear-blue-sky-325690099.jpg',
-        title: 'title-1',
-        alt: 'Elephant',
+        image: '/image/Simon-Game.png',
+        title: 'Simon Game',
+        alt: 'Simon-Game',
+        link: 'https://rodelgn.github.io/Simon-Game/',
+        githubLink: 'https://github.com/rodelgn/Simon-Game',
         paragraph: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s',
     },
     {

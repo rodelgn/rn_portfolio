@@ -42,7 +42,7 @@ function NavMenu({ skillsRef, projectRef, footerRef, navRef  }) {
                     </li>
 
                     <li><a href="#" className='link' onClick={() => handleScrollToSection(footerRef)}>Contact</a></li>
-                    <li><a href="#" className='link'>Resume</a></li>
+                    {/* <li><a href="#" className='link'>Resume</a></li> */}
                 </ul>
             </nav>
         </div>

@@ -387,7 +387,6 @@ body {
     height: 300px;
     width: 400px;
     padding-right: 3rem;
-    border-radius: 5px;
 }
 
 .card-content {
@@ -415,6 +414,8 @@ body {
     width: fit-content;
     padding: 0.5rem 1rem;
     border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #7b7878;
     cursor: pointer;
     transition: background-color 0.3s
 }
@@ -743,6 +744,7 @@ body {
     .card1 img {
         width: 80%;
         height: auto;
+        border-radius: 8px;
     }
     .card-content, .btn-proj {
         text-align: center;
