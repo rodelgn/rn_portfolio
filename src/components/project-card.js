@@ -1,4 +1,4 @@
-import SimonGame from '../../assets/image/Simon-Game.png';
+import SimonGame from '../assets/image/Simon-Game.png';
 
 const cards = [
     {
