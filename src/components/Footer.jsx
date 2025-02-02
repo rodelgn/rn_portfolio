@@ -1,11 +1,17 @@
 import React, { useState, forwardRef } from 'react';
 import './styles.css';
 import Rodel_CV from '/src/assets/file/Rodel_Nercuit-CV.pdf';
+import Swal from 'sweetalert2'
 
 
 const Footer = forwardRef (( props, ref ) => {
     const { navRef } = props;
     const [isVisible, setIsVisible] = useState(false);
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: '',
+    });
 
     React.useEffect(() => {
         if (ref && ref.current) {
@@ -37,20 +43,56 @@ const Footer = forwardRef (( props, ref ) => {
         // console.log("Download CV");
     };
 
+    const handleInput = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    //Contact Form
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+    
+        formData.append("access_key", "6dcdfc52-5741-4b97-80fd-bb5f6c4eb487");
+    
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+    
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+          },
+          body: json
+        }).then((res) => res.json());
+    
+        if (res.success) {
+            Swal.fire({
+                title: "Message Sent!",
+                icon: "success",
+                draggable: true
+              });
+            setFormData({ name: '', email: '', message: '' });
+        }
+      };
+
     return (
         <div ref={ref} className={`footerContainer ${isVisible ? 'fade-in' : 'fade-out'}`}>
             <h1>Get in Touch</h1>
 
             <div className='form-cntnr'>
-                <form className='input-cntnr' action="" method="post">
-                    <label>Name</label>
-                    <input type="text" placeholder='Name'/>
-                    <label>Email</label>
-                    <input type="text" placeholder='Email'/>
+                <form className='input-cntnr' action="" method="post" onSubmit={onSubmit}>
+                    <label>Full Name:</label>
+                    <input type="text" value={formData.name} onChange={handleInput} placeholder='Your Name' name='name' required />
+                    <label>Email Address:</label>
+                    <input type="email" value={formData.email} onChange={handleInput} placeholder='Your Email' name='email' required/>
                     {/* <label>Company</label>
                     <input type="text" placeholder='Company'/> */}
                     <label>Message:</label>
-                    <textarea placeholder="Enter Message" rows="4" cols="50" defaultValue=""></textarea>
+                    <textarea placeholder="Enter Message" value={formData.message} onChange={handleInput} rows="4" cols="50" defaultValue="" name='message' required></textarea>
                     <button type='submit'>Send Message</button>
                 </form>
             </div>
