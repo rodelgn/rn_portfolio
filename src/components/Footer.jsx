@@ -84,15 +84,15 @@ const Footer = forwardRef (( props, ref ) => {
             <h1>Get in Touch</h1>
 
             <div className='form-cntnr'>
-                <form className='input-cntnr' action="" method="post">
-                    <label>Name</label>
-                    <input type="text" placeholder='Name'/>
-                    <label>Email</label>
-                    <input type="text" placeholder='Email'/>
+                <form className='input-cntnr' action="" method="post" onSubmit={onSubmit}>
+                    <label>Full Name:</label>
+                    <input type="text" value={formData.name} onChange={handleInput} placeholder='Name' name='name' required/>
+                    <label>Email Address:</label>
+                    <input type="text" value={formData.email} onChange={handleInput} placeholder='Email' name='email' required/>
                     {/* <label>Company</label>
                     <input type="text" placeholder='Company'/> */}
                     <label>Message:</label>
-                    <textarea placeholder="Enter Message" rows="4" cols="50" defaultValue=""></textarea>
+                    <textarea placeholder="Enter Message" value={formData.message} onChange={handleInput} rows="4" cols="50" name='message' required></textarea>
                     <button type='submit'>Send Message</button>
                 </form>
             </div>
