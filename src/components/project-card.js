@@ -8,7 +8,7 @@ const cards = [
         alt: 'Simon-Game',
         link: 'https://rodelgn.github.io/Simon-Game/',
         githubLink: 'https://github.com/rodelgn/Simon-Game',
-        paragraph: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s',
+        paragraph: 'Is an interactive digital adaptation of the classic Simon memory game, where players follow and repeat sequences of colored lights and sounds. The game includes a "strict mode" for added difficulty (resetting progress after errors) and a start button to initiate gameplay. Built with HTML, CSS, and JavaScript, it offers a responsive, browser-based experience compatible with both desktop and mobile devices',
     },
     {
         id: 2,

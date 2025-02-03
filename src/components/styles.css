@@ -320,7 +320,7 @@ body {
     width: 90%;
     height: 600px;
     margin: 4rem auto;
-    margin-top: 5em;
+    /* margin-top: 5em; */
     position: relative;
 }
 .project-ctn .title {
@@ -547,6 +547,7 @@ body {
 .footerContainer {
     width: 90%;
     margin: auto;
+    margin-top: 10rem;
     scroll-margin-top: 100px;
     opacity: 0;
     transform: translateY(30px);
