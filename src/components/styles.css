@@ -99,15 +99,17 @@ body {
 
 /* Change the burger icon to a cross when the menu is open */
 .burger .line.open {
-    transform: rotate(45deg);
+    transform: rotate(390deg);
 }
 
 .burger .line:nth-child(2).open {
     opacity: 0;
+    /* transform: rotate(-360deg); */
 }
 
 .burger .line:nth-child(3).open {
-    transform: rotate(-45deg);
+    transform: rotate(-390deg);
+    /* opacity: 0; */
 }
 
 /* Starting Style Banner */
@@ -317,7 +319,7 @@ body {
 }
 
 .project-ctn {
-    width: 90%;
+    /* width: 90%; */
     height: 600px;
     margin: 4rem auto;
     /* margin-top: 5em; */
@@ -326,12 +328,12 @@ body {
 .project-ctn .title {
     text-align: center;
     font-size: 36px;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     position: relative;
 }
 
 .project-section .card1 {
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
     opacity: 1;
     transform: translateX(0);
 }
@@ -363,7 +365,7 @@ body {
 
 .card1 img {
     width: 100%;
-    height: auto;
+    height: 300px;
     max-width: 400px;
     object-fit: cover;
     border: 3px solid #7b7878;

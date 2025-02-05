@@ -5,13 +5,13 @@ import Swal from 'sweetalert2'
 
 
 const Footer = forwardRef (( props, ref ) => {
-    const { navRef } = props;
     const [isVisible, setIsVisible] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         message: '',
     });
+    const { navRef } = props;
 
     React.useEffect(() => {
         if (ref && ref.current) {
