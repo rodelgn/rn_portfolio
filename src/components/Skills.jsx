@@ -37,6 +37,7 @@ const Skills = forwardRef(( props, ref ) => {
                     <li><i class="fa fa-sharp fa-solid fa-database" style={{ fontSize: '32px', color: '#5D8736', marginRight: '6px' }}></i>MongoDB</li>
                     <li><i class="fa fa-solid fa-server" style={{ fontSize: '32px', color: '#5D8736', marginRight: '6px' }}></i>REST API</li>
                     <li><i className="fab fa-github" style={{ color: 'white', fontSize: '32px', marginRight: '6px' }}></i>Github</li>
+                    <li><i class="fab fa-brands fa-git-alt" style={{ fontSize: '32px', color: '#f34f29', marginRight: '6px' }}></i>Git</li>
                 </ul>
             </div>
         </div>
