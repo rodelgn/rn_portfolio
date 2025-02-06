@@ -275,8 +275,8 @@ body {
 }
 .skillSet li:hover {
     font-size: clamp(0.9rem, 1.1vw, 1.2rem);
-    background-color: #FFDE00;
-    color: black;
+    background-color: #7E99A3;
+    /* color: black; */
     transition: 0.3s;
     transform: scale(1.1);
 }
