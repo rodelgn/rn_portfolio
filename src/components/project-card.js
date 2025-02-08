@@ -1,4 +1,5 @@
 import SimonGame from '../assets/image/Simon-Game.png';
+import SnapNote from '../assets/image/Snap-Note.png';
 
 const cards = [
     {
@@ -8,14 +9,16 @@ const cards = [
         alt: 'Simon-Game',
         link: 'https://rodelgn.github.io/Simon-Game/',
         githubLink: 'https://github.com/rodelgn/Simon-Game',
-        paragraph: 'Is an interactive digital adaptation of the classic Simon memory game, where players follow and repeat sequences of colored lights and sounds. The game includes a "strict mode" for added difficulty (resetting progress after errors) and a start button to initiate gameplay. Built with HTML, CSS, and JavaScript, it offers a responsive, browser-based experience compatible with both desktop and mobile devices',
+        paragraph: 'Simon Game Is an interactive digital adaptation of the classic Simon memory game, where players follow and repeat sequences of colored lights and sounds. The game includes a "strict mode" for added difficulty (resetting progress after errors) and a start button to initiate gameplay. Built with HTML, CSS, and JavaScript, it offers a responsive, browser-based experience compatible with both desktop and mobile devices',
     },
     {
         id: 2,
-        image: 'https://i.natgeofe.com/n/f4d64d53-07ce-4933-a76e-1d405eec3473/giraffe_thumb.JPG',
-        title: 'title-2',
-        alt: 'Giraffe',
-        paragraph: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+        image: SnapNote,
+        title: 'SnapNote',
+        alt: 'Snap-Note',
+        link: 'https://snap-note-sandy.vercel.app/',
+        githubLink: 'https://github.com/rodelgn/snap-note',
+        paragraph: "SnapNote is your ultimate companion for quick, on-the-go note-taking. Built with Reactjs and Designed for simplicity and speed, SnapNote lets you capture ideas, reminders, and to-do lists in an instant. Whether you're jotting down a thought during a meeting, saving a quick grocery list, or organizing tasks for the day, SnapNote keeps everything at your fingertips."
     },
     {
         id: 3,
