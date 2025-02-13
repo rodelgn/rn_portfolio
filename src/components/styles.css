@@ -366,9 +366,10 @@ body {
 .card1 img {
     height: 300px;
     max-width: 400px;
-    object-fit: contain;
-    border: 6px solid #FF2929;
+    object-fit: inherit;
+    border: 3px solid #7b7878;
     border-radius: 8px;
+    box-shadow: 0 2px 5px #ccc;
 }
 
 .card-content {
