@@ -26,7 +26,7 @@ const Skills = forwardRef(( props, ref ) => {
                 <h1 className='title'>Skills</h1>
                 <ul className='skillSet'>
                     <li><i className="fab fa-brands fa-html5" style={{ fontSize: '36px', color: '#EB5A3C', marginRight: '6px' }}></i>HTML</li>
-                    <li><i className="fab fa-brands fa-css3-alt" style={{ fontSize: '36px', color: '#4635B1', marginRight: '6px' }}></i>CSS</li>
+                    <li><i className="fab fa-brands fa-css3-alt" style={{ fontSize: '36px', color: '#0A5EB0', marginRight: '6px' }}></i>CSS</li>
                     <li><i className="fab fa-brands fa-js" style={{ fontSize: '36px', color: '#FFEB00', marginRight: '6px' }}></i>JavaScript</li>
                     <li><i className="fab fa-brands fa-react" style={{ fontSize: '36px', color: '#537EA4', marginRight: '6px' }}></i>React</li>
                     <li><i className="fab fa-brands fa-bootstrap" style={{ fontSize: '36px', color: '#B771E5', marginRight: '6px' }}></i>Bootstrap</li>

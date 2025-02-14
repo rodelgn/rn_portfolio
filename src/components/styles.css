@@ -275,10 +275,11 @@ body {
 }
 .skillSet li:hover {
     font-size: clamp(0.9rem, 1.1vw, 1.2rem);
-    background-color: #7E99A3;
+    background-color: #3C3D37;
     /* color: black; */
     transition: 0.3s;
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 /* Starting Project Style */
@@ -367,9 +368,9 @@ body {
     height: 300px;
     max-width: 400px;
     object-fit: inherit;
-    border: 3px solid #7b7878;
+    border: 1px solid #f57676;
     border-radius: 8px;
-    box-shadow: 0 2px 5px #ccc;
+    box-shadow: 0 1px 5px #f16d6d;
 }
 
 .card-content {
