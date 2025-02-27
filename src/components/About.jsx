@@ -1,14 +1,14 @@
 import React from "react";
 import './styles.css';
 import rodel_img from '/src/assets/image/rodel_img.png';
-import Rodel_CV from '/src/assets/file/Rodel_Nercuit-CV.pdf';
+import Rodel_CV from '/src/assets/file/Rodel-Nercuit-CV.pdf';
 
 function About() {
 
     const downloadButton = () => {
         const link = document.createElement('a');
         link.href = Rodel_CV;
-        link.download = "Rodel_Nercuit-CV.pdf";
+        link.download = "Rodel-Nercuit-CV.pdf";
         link.click();
         // console.log("Download CV");
     };
