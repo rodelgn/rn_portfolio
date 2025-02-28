@@ -20,13 +20,13 @@ const cards = [
         githubLink: 'https://github.com/rodelgn/snap-note',
         paragraph: "SnapNote is your ultimate companion for quick, on-the-go note-taking. Built with Reactjs and Designed for simplicity and speed, SnapNote lets you capture ideas, reminders, and to-do lists in an instant. Whether you're jotting down a thought during a meeting, saving a quick grocery list, or organizing tasks for the day, SnapNote keeps everything at your fingertips."
     },
-    {
-        id: 3,
-        image: 'https://img.freepik.com/premium-vector/hippopotamus-water-vector-illustration-hippopotamus_1142-68209.jpg',
-        title: 'title-3',
-        alt: 'Hippo',
-        paragraph: 'when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    }
+    // {
+    //     id: 3,
+    //     image: 'https://img.freepik.com/premium-vector/hippopotamus-water-vector-illustration-hippopotamus_1142-68209.jpg',
+    //     title: 'title-3',
+    //     alt: 'Hippo',
+    //     paragraph: 'when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    // }
 ];
 
 export default cards;

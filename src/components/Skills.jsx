@@ -32,6 +32,7 @@ const Skills = forwardRef(( props, ref ) => {
                     <li><i className="fab fa-brands fa-bootstrap" style={{ fontSize: '36px', color: '#B771E5', marginRight: '6px' }}></i>Bootstrap</li>
                     <li><i className="fab fa-brands fa-node-js" style={{ fontSize: '36px', color: '#77B254', marginRight: '6px' }}></i>Node.js</li>
                     <li><i className="fa fa-regular fa-image" style={{ fontSize: '36px', color: '#EFF3EA', marginRight: '6px' }}></i>Express.js</li>
+                    <li><i className="fa fa-regular fa-image" style={{ fontSize: '36px', color: '#EFF3EA', marginRight: '6px' }}></i>EJS</li>
                     <li><i className="fab fa-brands fa-envira" style={{ fontSize: '34px', color: '#77B254', marginRight: '6px' }}></i>Leaflet</li>
                     <li><i className="fa fa-sharp fa-solid fa-database" style={{ fontSize: '32px', color: '#537EA4', marginRight: '6px' }}></i>PostgreSQL</li>
                     <li><i className="fa fa-sharp fa-solid fa-database" style={{ fontSize: '32px', color: '#5D8736', marginRight: '6px' }}></i>MongoDB</li>
