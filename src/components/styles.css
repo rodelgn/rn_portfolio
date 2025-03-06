@@ -287,7 +287,7 @@ body {
 .project-section {
     width: 90%;
     margin: 2rem auto;
-    scroll-margin-top: 100px;
+    scroll-margin-top: 40px;
     text-align: center;
     opacity: 0;
     transform: translateY(30px);
