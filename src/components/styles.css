@@ -18,6 +18,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 1rem 0;
+    color: #FFDE00;
 }
 
 /* Starting Styles for Navigation Bar */
@@ -170,28 +171,26 @@ body {
   }
 
   .note button {
-    cursor: pointer;
-    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    padding: 0.7rem 1.5rem;
-    margin-top: 30px;
-    font-weight: 700;
-    font-size: 16px;
-    text-align: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    background: rgba(255, 222, 0, 0.1);
+    border: 2px solid #FFDE00;
+    color: #FFDE00;
+    transition: all 0.3s ease;
     text-decoration: none;
-    color: #1A1A1D;
-    border-radius: 3rem;
-    transition: transform 0.3s;
+    font-weight: 700;
   }
   .note button i {
     margin-left: 5px;
   }
 
   .note button:hover {
-    transform: scale(1.05);
-    background-color: #1A1A1D;
-    color: #FFDE00;
+    background: #FFDE00;
+    color: #1A1A1D;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 222, 0, 0.3);
   }
 
   .img-container {
@@ -322,7 +321,7 @@ body {
 .project-ctn {
     /* width: 90%; */
     height: 600px;
-    margin: 4rem auto;
+    margin: 2rem auto;
     /* margin-top: 5em; */
     position: relative;
 }
@@ -350,7 +349,7 @@ body {
 .card1 {
     display: flex;
     flex-wrap: wrap;
-    gap: 4rem;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
 }
@@ -365,74 +364,87 @@ body {
 }
 
 .card1 img {
-    height: 300px;
-    max-width: 400px;
-    object-fit: inherit;
-    border: 1px solid #f57676;
-    border-radius: 8px;
-    box-shadow: 0 1px 5px #f16d6d;
+    flex: 50px;
+    height: 350px;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    border: 2px solid #FFDE00;
+}
+
+.card1 img:hover {
+    transform: scale(1.02);
 }
 
 .card-content {
+    flex: 1 1 400px;
     max-width: 500px;
-    display: flex;
-    flex-direction: column;
     text-align: left;
     padding: 1rem;
-    gap: 1.5rem;
-    flex: 1;
+    color: #e0e0e0;
 }
 
 .card-content h1 {
-    font-size: 29px;
-    margin-bottom: 0;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    /* color: #FFDE00; */
 }
 
 .card-content p {
-    font-size: 21px;
-    white-space: pre-wrap;
-    text-align: justify;
-    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 .lrn-more {
-    width: fit-content;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: #7b7878;
-    cursor: pointer;
-    transition: background-color 0.3s
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    background: rgba(255, 222, 0, 0.1);
+    border: 2px solid #FFDE00;
+    color: #FFDE00;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 500;
 }
+
 .lrn-more:hover {
-    background-color: #FFDE00;
+    background: #FFDE00;
     color: #1A1A1D;
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 222, 0, 0.3);
 }
 
 .navigation-btn {
     display: flex;
-    gap: 3em;
+    gap: 2rem;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .nav-btn {
-    width: fit-content;
-    color: #7b7878;
-    border: solid 1px white;
-    cursor: pointer;
-    font-size: 18px;
-    padding: 0.5rem 1rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: rgba(255, 222, 0, 0.1);
+    color: #FFDE00;
     border-radius: 50%;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    backdrop-filter: blur(5px);
+    border: 2px solid #FFDE00;
 }
 
 .nav-btn:hover {
-    background-color: #FFDE00;
+    background: #FFDE00;
     color: #1A1A1D;
-    opacity: 1;
-    transition: 0.5s;
+    transform: scale(1.1);
 }
 
 .btn-proj {
@@ -809,13 +821,20 @@ body {
     .aboutBody {
         margin: 2rem;
     }
-
+    /* Project Section */
+    
     .project-ctn {
         margin: 2rem auto;
     }
 
     .navigation-btn {
         gap: 1rem;
+    }
+
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
     }
 
      /* Skills-section */

@@ -81,7 +81,7 @@ const Footer = forwardRef (( props, ref ) => {
 
     return (
         <div ref={ref} className={`footerContainer ${isVisible ? 'fade-in' : 'fade-out'}`}>
-            <h1>Get in Touch</h1>
+            <h1 className='title'>Get in Touch</h1>
 
             <div className='form-cntnr'>
                 <form className='input-cntnr' action="" method="post" onSubmit={onSubmit}>
