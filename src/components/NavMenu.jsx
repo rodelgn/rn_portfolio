@@ -34,14 +34,14 @@ function NavMenu({ skillsRef, projectRef, footerRef, navRef  }) {
                     <li><a href="/" className='link'>About</a></li>
 
                     <li>
-                        <a href="#" className='link' onClick={() => handleScrollToSection(skillsRef)}>Skills</a>
+                        <a href="skills" className='link' onClick={() => handleScrollToSection(skillsRef)}>Skills</a>
                     </li>
 
                     <li>
-                        <a href="#" className='link' onClick={() => handleScrollToSection(projectRef)}>Projects</a>
+                        <a href="projects" className='link' onClick={() => handleScrollToSection(projectRef)}>Projects</a>
                     </li>
 
-                    <li><a href="#" className='link' onClick={() => handleScrollToSection(footerRef)}>Contact</a></li>
+                    <li><a href="contact" className='link' onClick={() => handleScrollToSection(footerRef)}>Contact</a></li>
                     {/* <li><a href="#" className='link'>Resume</a></li> */}
                 </ul>
             </nav>
