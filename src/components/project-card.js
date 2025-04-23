@@ -28,7 +28,7 @@ const cards = [
         alt: 'GIS Web Application',
         link: 'https://gis-clonev2.vercel.app/',
         githubLink: 'https://github.com/rodelgn/GIS-CloneV2',
-        paragraph: 'The GIS Tax Mapping Web App is a cloned frontend of a previous tax mapping project designed for local government use. Built with React and Leaflet, it features an interactive map for exploring tax-related data like property boundaries and assessments, offering a user-friendly way to visualize and analyze geographic tax information. you login with the following credentials: Username: admin Password: 12345',
+        paragraph: 'The GIS Tax Mapping Web App is a cloned frontend of a previous tax mapping project designed for local government use. Built with React and Leaflet, it features an interactive map for exploring tax-related data like property boundaries and assessments, offering a user-friendly way to visualize and analyze geographic tax information. You can login with the following credentials: Username: admin Password: 12345',
     }
 ];
 
