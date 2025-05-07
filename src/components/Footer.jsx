@@ -101,8 +101,8 @@ const Footer = forwardRef (( props, ref ) => {
                 <ul className="mediaContainer">
                     <li><a className='link' href="https://github.com/rodelgn"><i className="fab fa-github" style={{ color: 'white', fontSize: '26px', marginRight: '6px' }}></i>GitHub</a></li>
                     <li><a className='link' href="https://www.linkedin.com/in/rodel-jr-nercuit-7395b5195/"><i className="fab fa-linkedin" aria-hidden="true" style={{ fontSize: '26px', color: 'white', marginRight: '6px' }}></i>LinkedIn</a></li>
+                    <li><a className='link' href='https://www.udemy.com/certificate/UC-e7563810-1c13-4b76-8b19-58966e53a70e/' style={{ cursor: 'pointer' }} ><i className="fa fa-solid fa-certificate" style={{ color: 'white', fontSize: '26px', marginRight: '6px' }}></i>Certificate</a></li>
                     <li><a className='link' style={{ cursor: 'pointer' }} onClick={downloadButton}><i className="fa fa-sharp fa-solid fa-file" style={{ color: 'white', fontSize: '26px', marginRight: '6px' }}></i>Resume</a></li>
-                    <li><a className='link' style={{ cursor: 'pointer' }} ><i className="fa fa-solid fa-certificate" style={{ color: 'white', fontSize: '26px', marginRight: '6px' }}></i>Certificate</a></li>
                 </ul>
             </div>
             <div className='to-top'>
