@@ -41,8 +41,10 @@ function NavMenu({ skillsRef, projectRef, footerRef, navRef  }) {
                         <a className='link' onClick={() => handleScrollToSection(projectRef)}>Projects</a>
                     </li>
 
+                    <li><a href="https://www.udemy.com/certificate/UC-e7563810-1c13-4b76-8b19-58966e53a70e/" className='link'>Certificate</a></li>
+
                     <li><a className='link' onClick={() => handleScrollToSection(footerRef)}>Contact</a></li>
-                    {/* <li><a href="#" className='link'>Resume</a></li> */}
+                    
                 </ul>
             </nav>
         </div>
