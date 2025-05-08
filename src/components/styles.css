@@ -285,7 +285,7 @@ body {
 .project-section {
     width: 90%;
     margin: 2rem auto;
-    scroll-margin-top: 40px;
+    scroll-margin-top: 30px;
     text-align: center;
     opacity: 0;
     transform: translateY(30px);
@@ -455,9 +455,22 @@ body {
 
 .footerContainer {
     width: 90%;
-    margin: 3rem auto;
-    scroll-margin-top: 100px;
-    text-align: center;
+    margin: auto;
+    margin-top: 10rem;
+    scroll-margin-top: 70px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.footerContainer.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footerContainer.fade-out {
+    opacity: 0;
+    transform: translateY(30px);
 }
 
 .form-cntnr {
@@ -560,26 +573,6 @@ body {
     justify-content: center;
     align-items: flex-end;
     margin: auto;
-}
-
-.footerContainer {
-    width: 90%;
-    margin: auto;
-    margin-top: 10rem;
-    scroll-margin-top: 100px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
-}
-
-.footerContainer.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.footerContainer.fade-out {
-    opacity: 0;
-    transform: translateY(30px);
 }
 
 .to-top {

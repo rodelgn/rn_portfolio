@@ -1,4 +1,4 @@
-import React, { useState, forwardRef } from 'react';
+import React, { useState, forwardRef, useEffect } from 'react';
 import './styles.css';
 
 const Projects = forwardRef (( { projects  }, ref ) => {
@@ -7,7 +7,7 @@ const Projects = forwardRef (( { projects  }, ref ) => {
     const [isTransitioning, setIsTransitioning] = useState(false);
     const [isNext, setIsNext] = useState(true);
     
-    React.useEffect(() => {
+    useEffect(() => {
         if (ref && ref.current) {
             const observer = new IntersectionObserver(
                 ([entry]) => {
