@@ -643,6 +643,41 @@ body {
 
 /* Starting Media Query */
 
+@media (max-width: 2000px) {
+    .aboutBody {
+        width: 100%;
+        gap: 4rem;
+    }
+    .aboutBody p {
+        font-size: 21px;
+    }
+
+    .skills-section {
+        width: 90%;
+        margin: 2rem auto;
+        scroll-margin-top: 130px;
+        margin-top: 10rem;
+    }
+
+    .project-section {
+        width: 90%;
+        margin: 2rem auto;
+        scroll-margin-top: 100px;
+        text-align: center;
+        margin-top: 17rem;
+    }
+    
+    .card1 p {
+        font-size: 21px;
+    }
+
+    .card1 img {
+        height: 500px;
+        border-radius: 12px;
+        box-shadow: 0 1px 10px #FFDE00;
+    }
+}
+
 @media (max-width: 1400px) {
     .aboutBody {
         gap: 4rem;
@@ -719,13 +754,19 @@ body {
         /* gap: 2rem; */
     }
     .card1 img {
-        width: 80%;
+        width: 90%;
         height: auto;
         border-radius: 8px;
     }
     .card-content, .btn-proj {
         text-align: center;
         justify-content: center;
+    }
+
+    .skills-section {
+        width: 90%;
+        margin: 2rem auto;
+        border: 1px solid #FFDE00;
     }
 }
 
