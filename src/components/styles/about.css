@@ -90,6 +90,22 @@
 }
 
 /* Responsive Media Query */
+@media (min-width: 1367px) and (max-width: 1600px) {
+    .aboutBody {
+        width: 100%;
+        flex-direction: row;
+        gap: 0;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+    .aboutBody {
+        width: 100%;
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+}
+
 @media (min-width: 601px) and (max-width: 1024px) {
     .aboutBody {
         flex-direction: column-reverse;
@@ -120,6 +136,7 @@
     .img-container {
         margin: 1rem auto;
         width: 80%;
+        max-width: 400px;
         height: auto;
         display: flex;
         justify-content: center;
