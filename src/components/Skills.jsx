@@ -1,5 +1,6 @@
 import React, { useState, forwardRef } from 'react';
 import './styles.css';
+import './styles/skills.css';
 
 const Skills = forwardRef(( props, ref ) => {
     const [isVisible, setIsVisible] = useState(false);

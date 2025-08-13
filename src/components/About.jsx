@@ -1,5 +1,5 @@
-import React from "react";
 import './styles.css';
+import './styles/about.css';
 import rodel_img from '/src/assets/image/rodel_img.png';
 // import Rodel_CV from '/src/assets/file/Rodel-Nercuit-CV.pdf';
 import Rodel_resume from '/src/assets/file/Rodel-Nercuit-Resume.pdf';
@@ -17,13 +17,13 @@ function About() {
     return (
         <div className="aboutBody">
             <div className="note">
-                <h3>Hello! I'm</h3>
+                <p>Hello! I'm</p>
                 <h1>Rodel Nercuit</h1>
                 <h2>Web Developer</h2>
                 <p> 
-                A passionate Web Developer who transitioned into tech to pursue my dream career. 
-                I focus on creating user-friendly and efficient web applications, 
-                combining creativity and problem-solving to deliver impactful digital solutions.
+                    A passionate Web Developer who transitioned into tech to pursue my dream career. 
+                    I focus on creating user-friendly and efficient web applications, 
+                    combining creativity and problem-solving to deliver impactful digital solutions.
                 </p>
 
                 <button onClick={downloadButton}>Download CV <i className="fa fa-download"></i></button>

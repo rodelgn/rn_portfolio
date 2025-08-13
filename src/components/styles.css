@@ -10,7 +10,7 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .title {
@@ -18,7 +18,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 1rem 0;
-    color: #FFDE00;
+    color: #FF2929;
 }
 
 /* Starting Styles for Navigation Bar */
@@ -99,7 +99,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Change the burger icon to a cross when the menu is open */
 .burger .line.open {
     transform: rotate(390deg);
 }
@@ -116,172 +115,12 @@ body {
 
 /* Starting Style Banner */
 
-.aboutBody {
-    width: 90%;
-    margin: 4rem auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 8rem;
-    margin-bottom: 8em;
-    animation: fadeIn 2s ease-in-out;
-}
 
-.note {
-    width: min(90%, 700px);
-    /* max-width: 700px; */
-    padding: 1rem;
-    border-radius: 7px;
-    animation: fadeInToRight 2s ease-in-out;
-  }
-  @keyframes fadeInToRight {
-    from {
-        opacity: 0;
-        transform: translateX(-20%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
-  .note h1 {
-    margin: 0.5rem 0;
-    font-size: 1.8rem;
-  }
+/* Skill Section */
 
-  .note h2 {
-    margin: 0.5rem 0;
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-
-  .note h3 {
-    margin: 0.5rem 0;
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-
-  .note p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    font-weight: lighter;
-    text-align: justify;
-  }
-
-  .note button {
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.8rem 1.5rem;
-    border-radius: 30px;
-    background: rgba(255, 222, 0, 0.1);
-    border: 2px solid #FFDE00;
-    color: #FFDE00;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    font-weight: 700;
-  }
-  .note button i {
-    margin-left: 3px;
-  }
-
-  .note button:hover {
-    background: #FFDE00;
-    color: #1A1A1D;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 222, 0, 0.3);
-  }
-
-  .img-container {
-    width: min(90%, 350px);
-    height: auto;
-    aspect-ratio: 1/1;
-    position: relative;
-  }
-
-  .border-rotating {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-}
-
-  .me-img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    /* transform: rotate(-75deg); */
-  }
-
-@keyframes fadeIn {
-     from {
-         opacity: 0;
-     }
-     to {
-         opacity: 1;
-     }
-}
-/* @keyframes rotateBorder {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-} */
-
-/* Starting Style for Skills */
-
-.skills-section {
-    width: 90%;
-    margin: 2rem auto;
-    scroll-margin-top: 100px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.skills-section.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.skills-section.fade-out {
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-.skillSet {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    margin-top: 3rem;
-    padding: 0;
-}
-.skillSet li {
-    font-size: clamp(0.9rem, 1.1vw, 1.2rem);
-    border: 1px solid #FFDE00;
-    border-radius: 20px;
-    padding: 0.8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s;
-}
-.skillSet li:hover {
-    background: #FFD700;
-    color: #1A1A1D;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 222, 0, 0.3);
-}
 
 /* Starting Project Style */
-
 .project-section {
     width: 90%;
     margin: 2rem auto;
@@ -644,50 +483,57 @@ body {
 /* Starting Media Query */
 
 @media (max-width: 2000px) {
-    .aboutBody {
-        width: 100%;
-        gap: 4rem;
-    }
-    .aboutBody p {
-        font-size: 21px;
-    }
 
     .skills-section {
         width: 90%;
-        margin: 2rem auto;
+        margin: 5rem auto;
         scroll-margin-top: 130px;
         margin-top: 10rem;
     }
 
     .project-section {
         width: 90%;
-        margin: 2rem auto;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
         scroll-margin-top: 100px;
         text-align: center;
         margin-top: 17rem;
     }
+
+    .card1 img {
+        width: 25%;
+        height: 500px;
+        border-radius: 12px;
+        box-shadow: 1px 1px 10px #FFDE00;
+    }
+}
+
+@media (min-width: 1260px) {
+    .aboutBody {
+        width: 90%;
+        gap: 3rem;
+        height: auto;
+    }
     
-    .card1 p {
-        font-size: 21px;
+    .project-section {
+        width: 90%;
+        margin: 2rem auto;
+        scroll-margin-top: 100px;
+        text-align: center;
+        margin-top: 10rem;
     }
 
     .card1 img {
-        height: 500px;
-        border-radius: 12px;
-        box-shadow: 0 1px 10px #FFDE00;
+        width: 55%;
+        height: auto;
+    }
+
+    .card-content h1, p {
+        font-size: 21px;
     }
 }
 
-@media (max-width: 1400px) {
-    .aboutBody {
-        gap: 4rem;
-        flex-direction: column-reverse;
-        align-items: center;
-        text-align: center;
-    }
-}
-
-@media (max-width: 1200px) {
+@media (max-width: 1259px) {
     .burger {
         display: flex;
         z-index: 20;
@@ -734,10 +580,8 @@ body {
     }
 
     .aboutBody {
-        /* gap: 4rem; */
-        flex-direction: column-reverse;
-        /* align-items: center; */
         text-align: center;
+        flex-direction: column-reverse;
     }
     .note {
         padding: 1rem;
@@ -747,16 +591,20 @@ body {
     }
     .project-section {
         margin-bottom: 20rem;
-        width: 90%;
+        width: 80%;
     }
     .card1 {
         flex-direction: column;
         /* gap: 2rem; */
+        margin-top: -1rem;
     }
     .card1 img {
         width: 90%;
         height: auto;
         border-radius: 8px;
+    }
+    .card-content {
+        margin-top: -3rem;
     }
     .card-content, .btn-proj {
         text-align: center;
@@ -766,11 +614,15 @@ body {
     .skills-section {
         width: 90%;
         margin: 2rem auto;
-        border: 1px solid #FFDE00;
+        flex-wrap: wrap;
+    }
+
+    .footerContainer {
+        margin-top: 3rem;
     }
 }
 
-@media (max-width: 1059px) {
+@media (max-width: 1060px) {
     #Nav {
         display: none;
         flex-direction: column;
@@ -814,17 +666,30 @@ body {
     }
 
     .skills-section {
-        width: 100%;
+        width: 90%;
+        margin: 2rem auto;
+        flex-wrap: wrap;
     }
 
     .project-section {
         margin: 1rem auto;
         margin-bottom: 20rem;
+        width: 60%;
+        height: auto;
+        scroll-margin: 20px;
     }
     .card1 img {
         width: 100%;
         height: auto;
     }
+    .card-content {
+        margin-top: -1rem;
+    }
+
+    .card-content h1, p{
+        font-size: 1.5rem;
+    }
+    
     .mediaContainer {
         margin-top: 1rem;
     }

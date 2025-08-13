@@ -1,0 +1,88 @@
+.aboutBody {
+    width: 100%;
+    margin: 4rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+    margin-bottom: 8em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.note {
+    width: min(90%, 900px);
+    padding: 1rem;
+    border-radius: 7px;
+    animation: fadeInToRight 2s ease-in-out;
+  }
+  
+  @keyframes fadeInToRight {
+    from {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.note h2 {
+    margin-top: -1.8rem;
+    color: #e0e0e0;
+}
+
+.note p {
+    color: #e0e0e0;
+    font-size: 24px;
+}
+
+.note button {
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    background: rgba(255, 222, 0, 0.1);
+    border: 2px solid #FFDE00;
+    color: #FFDE00;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+.note button i {
+    margin-left: 3px;
+  }
+
+.note button:hover {
+    background: #FFDE00;
+    color: #1A1A1D;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 222, 0, 0.3);
+  }
+
+.img-container {
+    width: min(90%, 350px);
+    height: auto;
+    aspect-ratio: 1/1;
+    position: relative;
+    margin-left: 5rem;
+  }
+
+.me-img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px #FF2929;
+    /* transform: rotate(-75deg); */
+  }
+
+@keyframes fadeIn {
+     from {
+         opacity: 0;
+     }
+     to {
+         opacity: 1;
+     }
+}
