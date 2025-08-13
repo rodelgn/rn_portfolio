@@ -106,6 +106,7 @@ const Footer = forwardRef (( props, ref ) => {
                     <li><a className='link' style={{ cursor: 'pointer' }} onClick={downloadButton}><i className="fa fa-sharp fa-solid fa-file" style={{ color: 'white', fontSize: '26px', marginRight: '6px' }}></i>Resume</a></li>
                 </ul>
             </div>
+            
             <div className='to-top'>
             <button className='to-top-btn' onClick={() => handleScrollToSection(navRef)}>
                 <i className="fa fa-angle-double-up" aria-hidden="true"></i>

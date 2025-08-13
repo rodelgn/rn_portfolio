@@ -122,8 +122,8 @@
 
 .to-top {
     position: fixed;
-    bottom: 13rem;
-    right: -2rem;
+    bottom: 5rem;
+    right: 5rem;
 }
 
 .to-top-btn {
@@ -136,7 +136,7 @@
     padding: 0.5rem 1rem;
     border-radius: 50%;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    opacity: 0.2;
+    opacity: 0.7;
     animation: bounce 2s ease-in-out infinite;
     animation-delay: 3s;
 }
@@ -148,6 +148,7 @@
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255, 222, 0, 0.3);
 }
+
 .tooltip-text {
     visibility: hidden;
     width: 70px;
@@ -183,5 +184,57 @@
     }
     60% {
         transform: translateY(-5px);
+    }
+}
+
+/* Responsive Media Query */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .footerContainer {
+        width: 90%;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .form-cntnr {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-cntnr {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .mediaContainer {
+        align-items: center;
+    }
+
+    .mediaContainer a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .footerContainer {
+        width: 95%;
+    }
+
+    .form-cntnr {
+        align-items: center;
+    }
+
+    .input-cntnr {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .mediaContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mediaContainer a {
+        font-size: 26px;
     }
 }
