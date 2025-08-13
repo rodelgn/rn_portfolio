@@ -14,7 +14,7 @@
     color: #FF2929;
     font-family: "Charmonman", serif;
     font-weight: 700;
-    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-size: 36px;
 }
 
 #Nav {
@@ -100,7 +100,8 @@
     #Nav {
         z-index: 15;
         display: none;
-        width: 200px;
+        width: 300px;
+        height: 500px;
     }
     
     #Nav.open {
@@ -111,10 +112,10 @@
         right: 20px;
         background-color: #EEEEEE;
         padding: 20px;
-        gap: 1rem;
+        gap: 3rem;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        z-index: 9;
+        z-index: 10;
         animation: fadeIn 0.5s ease-in-out;
     }
     #Nav li {
@@ -123,8 +124,8 @@
     #Nav li a {
         text-decoration: none;
         color: #0f0f0f;
-        font-size: 22px;
-        font-weight: 600;
+        font-size: 26px;
+        font-weight: 700;
     }
 }
 

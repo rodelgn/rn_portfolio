@@ -1,10 +1,12 @@
 .skills-section {
-    width: 90%;
-    margin: 2rem auto;
+    width: 95%;
+    height: 600px;
+    margin: 5rem auto;
     scroll-margin-top: 100px;
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    border: 1px solid #FFDE00;
 }
 
 .skills-section.fade-in {
@@ -22,21 +24,62 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
     margin-top: 3rem;
-    padding: 0;
+    padding: 10px;
 }
+
 .skillSet li {
     font-size: clamp(0.9rem, 1.1vw, 1.2rem);
     border: 1px solid #FFDE00;
     border-radius: 20px;
     padding: 0.8rem;
     display: flex;
+    gap: 0.8rem;
     justify-content: center;
     align-items: center;
     transition: all 0.3s;
 }
+
 .skillSet li:hover {
     background: #FFD700;
     color: #1A1A1D;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255, 222, 0, 0.3);
+}
+
+/* Responsive Media Query */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .skills-section {
+        width: 90%;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .skillSet {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .skillSet li {
+        font-size: clamp(0.8rem, 1vw, 1.1rem);
+        padding: 0.6rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-section {
+        width: 95%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .skillSet {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0.8rem;
+    }
+
+    .skillSet li {
+        font-size: clamp(0.7rem, 1vw, 1rem);
+        padding: 0.5rem;
+    }
 }
