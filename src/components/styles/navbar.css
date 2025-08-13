@@ -91,7 +91,7 @@
 /* Responsive Media Query */
 @media (min-width: 601px) and (max-width: 1024px) {
     .title-bnr {
-        font-size: 32px;
+        font-size: 36px;
     }
      .burger {
         display: flex;
