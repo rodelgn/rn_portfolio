@@ -1,5 +1,6 @@
-import React, { useState, forwardRef, useEffect } from 'react';
+import { useState, forwardRef, useEffect } from 'react';
 import './styles.css';
+import './styles/projects.css';
 
 const Projects = forwardRef (( { projects  }, ref ) => {
     const [isVisible, setIsVisible] = useState(false);

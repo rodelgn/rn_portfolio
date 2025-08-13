@@ -1,5 +1,6 @@
 import React, { useState, forwardRef } from 'react';
 import './styles.css';
+import './styles/footer.css';
 import Rodel_CV from '/src/assets/file/Rodel-Nercuit-CV.pdf';
 import Swal from 'sweetalert2'
 
