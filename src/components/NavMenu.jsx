@@ -13,6 +13,7 @@ function NavMenu({ skillsRef, projectRef, footerRef, navRef  }) {
                 block: 'start' 
             });
         }
+        setIsMenuOpen(false);
     };
 
     const toggleMenu = () => {
@@ -21,30 +22,37 @@ function NavMenu({ skillsRef, projectRef, footerRef, navRef  }) {
 
     return (
         <div id='header' ref={navRef}>
-            <h1 className='title-bnr'>Rodel</h1>
-            <nav>
+            <a className='title-bnr' href="#about" onClick={() => setIsMenuOpen(false)}>R</a>
+            <nav aria-label="Main navigation">
 
-                <div className="burger" onClick={toggleMenu}>
+                <button
+                    className="burger"
+                    type="button"
+                    onClick={toggleMenu}
+                    aria-label="Toggle navigation menu"
+                    aria-expanded={isMenuOpen}
+                    aria-controls="Nav"
+                >
                     <div className={`line ${isMenuOpen ? 'open' : ''}`}></div>
                     <div className={`line ${isMenuOpen ? 'open' : ''}`}></div>
                     <div className={`line ${isMenuOpen ? 'open' : ''}`}></div>
-                </div>
+                </button>
 
                 <ul id='Nav' className={isMenuOpen ? 'open' : ''}>
 
-                    <li><a href="/" className='link'>About</a></li>
+                    <li><a href="#about" className='link' onClick={() => setIsMenuOpen(false)}>About</a></li>
 
                     <li>
-                        <a className='link' onClick={() => handleScrollToSection(skillsRef)}>Skills</a>
+                        <button type="button" className='link nav-link-button' onClick={() => handleScrollToSection(skillsRef)}>Skills</button>
                     </li>
 
                     <li>
-                        <a className='link' onClick={() => handleScrollToSection(projectRef)}>Projects</a>
+                        <button type="button" className='link nav-link-button' onClick={() => handleScrollToSection(projectRef)}>Projects</button>
                     </li>
 
-                    <li><a href="https://www.udemy.com/certificate/UC-e7563810-1c13-4b76-8b19-58966e53a70e/" className='link'>Certificate</a></li>
+                    <li><a href="https://www.udemy.com/certificate/UC-e7563810-1c13-4b76-8b19-58966e53a70e/" className='link' target="_blank" rel="noreferrer">Certificate</a></li>
 
-                    <li><a className='link' onClick={() => handleScrollToSection(footerRef)}>Contact</a></li>
+                    <li><button type="button" className='link nav-link-button' onClick={() => handleScrollToSection(footerRef)}>Contact</button></li>
                     
                 </ul>
             </nav>

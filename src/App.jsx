@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import NavMenu from './components/NavMenu';
 import About from './components/About';
 import Skills from './components/Skills'
@@ -28,7 +28,6 @@ function App() {
       />
       <Footer 
       ref={footerRef}
-      navRef={navRef}
        />
     </div>
   );

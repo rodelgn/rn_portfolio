@@ -1,179 +1,174 @@
 #header {
-    max-width: 90%;
-    margin: 0 auto;
-    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 50;
     display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    justify-content: space-between;
     align-items: center;
-    animation: fadeIn 1.8s ease-in-out;
+    justify-content: space-between;
+    width: min(var(--max-width), calc(100% - 32px));
+    margin: 0 auto;
+    padding: 1rem 0;
+    animation: fadeIn 0.8s ease-in-out;
 }
 
 .title-bnr {
-    color: #FF2929;
+    color: var(--text);
     font-family: "Charmonman", serif;
+    font-size: 2rem;
     font-weight: 700;
-    font-size: 36px;
+    text-decoration: none;
+}
+
+.title-bnr:hover,
+.title-bnr:focus-visible {
+    color: var(--accent);
+    outline: none;
+}
+
+#header nav {
+    display: flex;
+    align-items: center;
 }
 
 #Nav {
     display: flex;
     align-items: center;
+    gap: 0.35rem;
+    margin: 0;
+    padding: 0.35rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(13, 15, 18, 0.72);
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(18px);
     list-style: none;
-    gap: 2.7em;
-    flex-wrap: wrap;
 }
 
 .link {
-    text-decoration: none;
-    color: #ccc6c6;
-    font-size: clamp(1rem, 1.2vw, 1.2rem);
-    font-weight: 500;
-    padding-bottom: 0.5rem;
     position: relative;
-    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    min-height: 40px;
+    padding: 0.6rem 0.9rem;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--muted);
+    font-size: 0.98rem;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
-.link::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background: #FFDE00;
-    border-radius: 5px;
-    transform: scaleX(0);
-    transition: all 0.5s ease;
-}
-.link:hover {
-    color: #FFDE00;
-}
-.link:hover::before {
-    transform: scaleX(1);
+.nav-link-button {
+    appearance: none;
 }
 
-/* Burger icon */
+.link:hover,
+.link:focus-visible {
+    color: var(--text);
+    background: rgba(247, 245, 242, 0.08);
+    outline: none;
+}
+
+.link:active {
+    transform: translateY(1px);
+}
+
 .burger {
     display: none;
+    width: 44px;
+    height: 44px;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 5px;
-    width: 30px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    z-index: 20;
-    padding: 5px;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text);
+}
+
+.burger:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
 }
 
 .burger .line {
-    height: 3px;
-    width: 100%;
-    background-color: #F7F5F2;
-    transition: all 0.3s ease;
+    width: 19px;
+    height: 2px;
+    border-radius: 999px;
+    background-color: var(--text);
+    transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-.burger .line.open {
-    transform: rotate(390deg);
+.burger .line:nth-child(1).open {
+    transform: translateY(7px) rotate(45deg);
 }
 
 .burger .line:nth-child(2).open {
     opacity: 0;
-    /* transform: rotate(-360deg); */
 }
 
 .burger .line:nth-child(3).open {
-    transform: rotate(-390deg);
-    /* opacity: 0; */
+    transform: translateY(-7px) rotate(-45deg);
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
 
-/* Responsive Media Query */
-@media (min-width: 601px) and (max-width: 1024px) {
-    .title-bnr {
-        font-size: 36px;
-    }
-     .burger {
-        display: flex;
-        z-index: 20;
-    }
-    #Nav {
-        z-index: 15;
-        display: none;
-        width: 300px;
-        height: 500px;
-    }
-    
-    #Nav.open {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        background-color: #EEEEEE;
-        padding: 20px;
-        gap: 3rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        z-index: 10;
-        animation: fadeIn 0.5s ease-in-out;
-    }
-    #Nav li {
-        margin: 10px 0;
-    }
-    #Nav li a {
-        text-decoration: none;
-        color: #0f0f0f;
-        font-size: 26px;
-        font-weight: 700;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 820px) {
+    #header {
+        width: min(100% - 24px, var(--max-width));
+        padding: 0.85rem 0;
+    }
+
     .title-bnr {
-        font-size: 32px;
+        font-size: 1.8rem;
     }
 
     .burger {
         display: flex;
-        z-index: 20;
-    }
-    .burger .line {
-        width: 30px;
-        height: 3px;
-        background-color: #F7F5F2;
-        transition: all 0.3s ease;
     }
 
     #Nav {
-        z-index: 15;
+        position: fixed;
+        top: 72px;
+        right: 12px;
+        left: 12px;
         display: none;
-        width: 200px;
+        align-items: stretch;
+        gap: 0.2rem;
+        padding: 0.55rem;
+        border-radius: var(--radius);
+        background: rgba(25, 29, 36, 0.96);
     }
-    
+
     #Nav.open {
         display: flex;
         flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        background-color: #EEEEEE;
-        padding: 20px;
-        gap: 1rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        z-index: 9;
-        animation: fadeIn 0.5s ease-in-out;
+        animation: fadeIn 0.22s ease-out;
     }
 
-    #Nav li {
-        margin: 10px 0;
-    }
-
-    #Nav li a {
-        text-decoration: none;
-        color: #0f0f0f;
-        font-size: 22px;
-        font-weight: 600;
+    #Nav .link {
+        width: 100%;
+        justify-content: flex-start;
+        min-height: 46px;
+        padding: 0.8rem 0.9rem;
+        border-radius: 6px;
+        color: var(--text);
     }
 }
