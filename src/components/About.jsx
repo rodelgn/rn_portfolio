@@ -18,7 +18,7 @@ function About() {
             <div className="note">
                 <p className="eyebrow">
                     <span className="status-dot" aria-hidden="true"></span>
-                    Available for web projects
+                    Web application portfolio
                 </p>
                 <h1 id="about-title">Rodel Nercuit</h1>
                 <h2>Web Developer</h2>
