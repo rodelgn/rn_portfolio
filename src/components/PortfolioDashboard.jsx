@@ -41,6 +41,24 @@ const quickStats = [
     { label: 'Core stack', value: 'React / Next.js' },
 ];
 
+const profileLinks = [
+    {
+        label: 'GitHub',
+        href: 'https://github.com/rodelgn',
+        icon: 'fab fa-github',
+    },
+    {
+        label: 'LinkedIn',
+        href: 'https://www.linkedin.com/in/rodel-jr-nercuit-7395b5195/',
+        icon: 'fab fa-linkedin',
+    },
+    {
+        label: 'Certificate',
+        href: 'https://www.udemy.com/certificate/UC-e7563810-1c13-4b76-8b19-58966e53a70e/',
+        icon: 'fa fa-certificate',
+    },
+];
+
 function PortfolioDashboard() {
     const [activeSection, setActiveSection] = useState('overview');
     const [slideDirection, setSlideDirection] = useState('forward');
@@ -204,6 +222,14 @@ function PortfolioDashboard() {
                                     <i className="fa fa-download" aria-hidden="true"></i>
                                     Download resume
                                 </button>
+                                <div className="contact-socials" aria-label="Profile links">
+                                    {profileLinks.map((link) => (
+                                        <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
+                                            <i className={link.icon} aria-hidden="true"></i>
+                                            <span>{link.label}</span>
+                                        </a>
+                                    ))}
+                                </div>
                             </div>
                             <form className="dashboard-form" onSubmit={handleSubmit}>
                                 <label htmlFor="name">Full Name</label>
