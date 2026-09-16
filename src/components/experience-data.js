@@ -6,8 +6,8 @@ export const workExperiences = [
         summary: 'Contributed to a government‑agency web application featuring map‑driven workflows, responsive user frontend interfaces, and backend‑integrated data services',
         stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'FastAPI', 'SQLAlchemy', 'PostgreSQL', 'Python', 'GIS'],
         highlights: [
-            'Built and refined responsive frontend views for GIS and data-heavy screens.',
-            'Supported integration points for a Python backend using FastAPI and SQLAlchemy.',
+            'Built and refined responsive frontend views for a GIS and data-heavy application.',
+            'Supported integration points for a Python backend using FastAPI with SQLAlchemy.',
             'Worked with PostgreSQL-backed data used by mapping and review workflows.',
         ],
     },

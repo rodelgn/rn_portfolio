@@ -265,7 +265,7 @@ function PortfolioDashboard() {
                             <div className="overview-notes">
                                 <h3>Working Style</h3>
                                 <p>
-                                    I like building clear screens for records, maps, forms, and review workflows where the interface helps people move faster through real data.
+                                    I like building clear screens for records, maps, forms, and review workflows where the interface helps people.
                                 </p>
                                 <div className="overview-actions">
                                     <button type="button" className="primary-action" onClick={() => handleSectionChange('projects')}>
