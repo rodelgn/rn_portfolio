@@ -156,12 +156,16 @@
     padding: 1rem;
 }
 
-.profile-card img {
+.profile-icon {
+    display: grid;
     width: 96px;
     aspect-ratio: 1;
     border: 1px solid rgba(245, 197, 66, 0.4);
     border-radius: var(--radius);
-    object-fit: cover;
+    place-items: center;
+    background: rgba(245, 197, 66, 0.1);
+    color: var(--accent);
+    font-size: 2.5rem;
 }
 
 .profile-card h3,
@@ -481,7 +485,7 @@
         grid-template-columns: 1fr;
     }
 
-    .profile-card img {
+    .profile-icon {
         width: 84px;
     }
 

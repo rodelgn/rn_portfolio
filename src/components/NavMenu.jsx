@@ -1,4 +1,5 @@
 import './styles/navbar.css';
+import rodelImg from '/src/assets/image/del-219283.png';
 
 function NavMenu({ items, activeSection, onSectionChange }) {
     return (
@@ -8,7 +9,7 @@ function NavMenu({ items, activeSection, onSectionChange }) {
                     event.preventDefault();
                     onSectionChange('overview');
                 }}>
-                    R
+                    <img src={rodelImg} alt="Rodel Nercuit" />
                 </a>
                 <div>
                     <p className="sidebar-name">Rodel Nercuit</p>

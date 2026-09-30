@@ -3,7 +3,6 @@ import Swal from 'sweetalert2';
 import NavMenu from './NavMenu';
 import WorkExperience from './WorkExperience';
 import cards from './project-card';
-import rodelImg from '/src/assets/image/rodel_img.png';
 import RodelResume from '/src/assets/file/Rodel-Nercuit-Resume.pdf';
 import './styles.css';
 import './styles/dashboard.css';
@@ -253,7 +252,9 @@ function PortfolioDashboard() {
                     >
                         <div className="overview-grid">
                             <div className="profile-card">
-                                <img src={rodelImg} alt="Rodel Nercuit" />
+                                <div className="profile-icon" aria-hidden="true">
+                                    <i className="fa fa-code" />
+                                </div>
                                 <div>
                                     <h3>GIS / Frontend Developer</h3>
                                     <p>

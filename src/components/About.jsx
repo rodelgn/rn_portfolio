@@ -10,7 +10,6 @@ function About() {
         link.href = Rodel_resume;
         link.download = "Rodel-Nercuit-Resume.pdf";
         link.click();
-        // console.log("Download CV");
     };
 
     return (
