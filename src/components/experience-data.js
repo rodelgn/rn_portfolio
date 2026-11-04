@@ -12,7 +12,7 @@ export const workExperiences = [
         ],
     },
     {
-        role: 'Web Developer',
+        role: 'Full-Stack Developer',
         organization: '8Nexity Technology Corporation',
         period: 'August 2023 - October 2025',
         summary: 'Built web application interfaces and APIs supporting mapping and notice‑management workflows; contributed to a government‑agency platform with map‑focused functionality.',

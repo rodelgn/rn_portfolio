@@ -18,26 +18,74 @@ const navItems = [
 const skillGroups = [
     {
         title: 'Frontend',
-        items: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Bootstrap'],
+        items: [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'TypeScript',
+            'React',
+            'Next.js',
+            'jQuery',
+            'Tailwind CSS',
+            'Bootstrap',
+            'Leaflet.js',
+        ],
     },
     {
-        title: 'Maps and Data',
-        items: ['GIS', 'Leaflet.js', 'PostgreSQL', 'PostGIS', 'MongoDB', 'REST API'],
+        title: 'Backend & APIs',
+        items: [
+            'Node.js',
+            'Express.js',
+            'Python',
+            'FastAPI',
+            'REST APIs',
+            'EJS',
+        ],
     },
     {
-        title: 'Backend and Tools',
-        items: ['Node.js', 'Express.js', 'FastAPI', 'SQLAlchemy', 'Git', 'GitHub'],
+        title: 'Databases & ORMs',
+        items: [
+            'PostgreSQL',
+            'MongoDB',
+            'SQLAlchemy',
+        ],
     },
     {
-        title: 'Operations',
-        items: ['Salesforce', 'SalesLoft', 'Asana', 'Google Analytics', 'WordPress', 'SEO'],
+        title: 'Developer Tools',
+        items: [
+            'Git',
+            'GitHub',
+        ],
+    },
+    {
+        title: 'Platforms & Business Tools',
+        items: [
+            'Duda',
+            'Salesforce',
+            'Salesloft',
+        ],
+    },
+    {
+        title: 'Analytics & SEO',
+        items: [
+            'Google Analytics',
+            'Google Search Console',
+        ],
+    },
+    {
+        title: 'Project Management & Productivity',
+        items: [
+            'Asana',
+            'Google Docs',
+            'Microsoft Office',
+        ],
     },
 ];
 
 const quickStats = [
     { label: 'Recent role', value: 'GIS + Frontend' },
     { label: 'Strongest fit', value: 'Web apps with maps' },
-    { label: 'Core stack', value: 'React / Next.js' },
+    { label: 'Frontend stack', value: 'React.js / Next.js' },
 ];
 
 const profileLinks = [
@@ -190,7 +238,7 @@ function PortfolioDashboard() {
                     <PanelFrame
                         eyebrow="Tech Stack"
                         title="Tools I Use"
-                        description="Grouped by how I actually use them: frontend screens, map/data workflows, backend work, and operations."
+                        description="Grouped by how I actually use them: frontend screens, map/data workflows, backend work, and other operations."
                     >
                         <div className="skill-groups">
                             {skillGroups.map((group) => (
@@ -258,7 +306,7 @@ function PortfolioDashboard() {
                                 <div>
                                     <h3>GIS / Frontend Developer</h3>
                                     <p>
-                                        I build usable web application screens with React and Next.js, and I am comfortable around mapping workflows, APIs, and database-backed features.
+                                        I build usable web application screens with React.js and Next.js, and I am comfortable around mapping workflows, APIs, and database-backed features.
                                     </p>
                                 </div>
                             </div>
@@ -303,10 +351,10 @@ function PortfolioDashboard() {
                         <span>Portfolio Workspace</span>
                         <h1>{activeItem.label}</h1>
                     </div>
-                    <button type="button" className="topbar-resume" onClick={downloadResume}>
+                    {/* <button type="button" className="topbar-resume" onClick={downloadResume}>
                         <i className="fa fa-file" aria-hidden="true"></i>
                         Resume
-                    </button>
+                    </button> */}
                 </header>
 
                 <section
