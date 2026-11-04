@@ -63,20 +63,11 @@ const skillGroups = [
             'Duda',
             'Salesforce',
             'Salesloft',
-        ],
-    },
-    {
-        title: 'Analytics & SEO',
-        items: [
-            'Google Analytics',
-            'Google Search Console',
-        ],
-    },
-    {
-        title: 'Project Management & Productivity',
-        items: [
+            'Trello',
             'Asana',
             'Google Docs',
+            'Google Analytics',
+            'Google Search Console',
             'Microsoft Office',
         ],
     },
