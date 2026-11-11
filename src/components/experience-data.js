@@ -2,7 +2,7 @@ export const workExperiences = [
     {
         role: 'GIS and Frontend Developer',
         organization: 'BaseUp Labs',
-        period: 'March 2026 - June 15, 2026',
+        period: 'March 2026 - June 2026',
         summary: 'Contributed to a government‑agency web application featuring map‑driven workflows, responsive user frontend interfaces, and backend‑integrated data services',
         stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'FastAPI', 'SQLAlchemy', 'PostgreSQL', 'Python', 'GIS'],
         highlights: [

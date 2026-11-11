@@ -8,10 +8,10 @@ import './styles.css';
 import './styles/dashboard.css';
 
 const navItems = [
-    { id: 'overview', label: 'Overview', icon: 'fa fa-user' },
+    { id: 'overview', label: 'About Me', icon: 'fa fa-user' },
+    { id: 'skills', label: 'Tech Stack', shortLabel: 'Stack', icon: 'fa fa-layer-group' },
     { id: 'experience', label: 'Work Log', shortLabel: 'Work', icon: 'fa fa-briefcase' },
     { id: 'projects', label: 'Project Records', shortLabel: 'Projects', icon: 'fa fa-folder-open' },
-    { id: 'skills', label: 'Tech Stack', shortLabel: 'Stack', icon: 'fa fa-layer-group' },
     { id: 'contact', label: 'Contact', icon: 'fa fa-paper-plane' },
 ];
 
@@ -287,7 +287,7 @@ function PortfolioDashboard() {
                     <PanelFrame
                         eyebrow="Profile"
                         title="Rodel Nercuit"
-                        description="Detail-oriented Web Developer with hands-on experience building GIS Tax Mapping web applications for government agencies."
+                        description="Detail-oriented Web Developer with hands-on experience building GIS Tax Mapping web applications for government agencies. Skilled in creating RESTful APIs and responsive web applications using PERN Stack (PostgreSQL, Express.js, React.js, Node.js) and Leaflet.js for interactive geospatial visualization."
                     >
                         <div className="overview-grid">
                             <div className="profile-card">
