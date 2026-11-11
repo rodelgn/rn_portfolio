@@ -8,9 +8,9 @@ import './styles.css';
 import './styles/dashboard.css';
 
 const navItems = [
+    { id: 'experience', label: 'Work Log', shortLabel: 'Work', icon: 'fa fa-briefcase' },
     { id: 'overview', label: 'About Me', icon: 'fa fa-user' },
     { id: 'skills', label: 'Tech Stack', shortLabel: 'Stack', icon: 'fa fa-layer-group' },
-    { id: 'experience', label: 'Work Log', shortLabel: 'Work', icon: 'fa fa-briefcase' },
     { id: 'projects', label: 'Project Records', shortLabel: 'Projects', icon: 'fa fa-folder-open' },
     { id: 'contact', label: 'Contact', icon: 'fa fa-paper-plane' },
 ];
@@ -48,6 +48,8 @@ const skillGroups = [
             'PostgreSQL',
             'MongoDB',
             'SQLAlchemy',
+            'Alembic',
+            'PostGIS',
         ],
     },
     {
@@ -75,8 +77,8 @@ const skillGroups = [
 
 const quickStats = [
     { label: 'Recent role', value: 'GIS + Frontend' },
+    { label: 'Recent Tech Stack', value: 'Next.js, Tailwind CSS, Python, FastAPI, SQLAlchemy, PostgreSQL and Alembic' },
     { label: 'Strongest fit', value: 'Web apps with maps' },
-    { label: 'Frontend stack', value: 'React.js / Next.js' },
 ];
 
 const profileLinks = [
@@ -102,6 +104,7 @@ function PortfolioDashboard() {
     const [slideDirection, setSlideDirection] = useState('forward');
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     const [isSending, setIsSending] = useState(false);
+    const [isResumeOpen, setIsResumeOpen] = useState(false);
 
     const activeItem = useMemo(
         () => navItems.find((item) => item.id === activeSection) || navItems[0],
@@ -118,13 +121,6 @@ function PortfolioDashboard() {
         setSlideDirection(nextIndex > currentIndex ? 'forward' : 'back');
         setActiveSection(nextSection);
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-
-    const downloadResume = () => {
-        const link = document.createElement('a');
-        link.href = RodelResume;
-        link.download = 'Rodel-Nercuit-Resume.pdf';
-        link.click();
     };
 
     const handleInput = (event) => {
@@ -256,9 +252,9 @@ function PortfolioDashboard() {
                             <div className="contact-notes">
                                 <h3>Good fit</h3>
                                 <p>Frontend work, dashboard interfaces, map-based workflows, and backend-connected web features.</p>
-                                <button type="button" className="primary-action" onClick={downloadResume}>
-                                    <i className="fa fa-download" aria-hidden="true"></i>
-                                    Download resume
+                                <button type="button" className="primary-action" onClick={() => setIsResumeOpen(true)}>
+                                    <i className="fa fa-file-pdf" aria-hidden="true"></i>
+                                    View resume
                                 </button>
                                 <div className="contact-socials" aria-label="Profile links">
                                     {profileLinks.map((link) => (
@@ -295,7 +291,7 @@ function PortfolioDashboard() {
                                     <i className="fa fa-code" />
                                 </div>
                                 <div>
-                                    <h3>GIS / Frontend Developer</h3>
+                                    <h3>Full-Stack Developer</h3>
                                     <p>
                                         I build usable web application screens with React.js and Next.js, and I am comfortable around mapping workflows, APIs, and database-backed features.
                                     </p>
@@ -312,9 +308,9 @@ function PortfolioDashboard() {
                                         <i className="fa fa-folder-open" aria-hidden="true"></i>
                                         View projects
                                     </button>
-                                    <button type="button" className="secondary-action" onClick={downloadResume}>
-                                        <i className="fa fa-download" aria-hidden="true"></i>
-                                        Resume
+                                    <button type="button" className="secondary-action" onClick={() => setIsResumeOpen(true)}>
+                                        <i className="fa fa-file-pdf" aria-hidden="true"></i>
+                                        View resume
                                     </button>
                                 </div>
                             </div>
@@ -356,6 +352,30 @@ function PortfolioDashboard() {
                     {renderPanel()}
                 </section>
             </main>
+            {isResumeOpen && (
+                <div className="resume-viewer-backdrop" role="presentation" onClick={() => setIsResumeOpen(false)}>
+                    <section
+                        className="resume-viewer"
+                        role="dialog"
+                        aria-modal="true"
+                        aria-labelledby="resume-viewer-title"
+                        onClick={(event) => event.stopPropagation()}
+                    >
+                        <header className="resume-viewer-header">
+                            <h2 id="resume-viewer-title">Resume</h2>
+                            <button
+                                type="button"
+                                className="resume-viewer-close"
+                                aria-label="Close resume viewer"
+                                onClick={() => setIsResumeOpen(false)}
+                            >
+                                <i className="fa fa-times" aria-hidden="true"></i>
+                            </button>
+                        </header>
+                        <iframe className="resume-viewer-document" src={RodelResume} title="Rodel Nercuit resume" />
+                    </section>
+                </div>
+            )}
         </div>
     );
 }

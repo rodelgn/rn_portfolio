@@ -399,6 +399,73 @@
     resize: vertical;
 }
 
+.resume-viewer-backdrop {
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: max(1rem, env(safe-area-inset-top)) max(1rem, env(safe-area-inset-right)) max(1rem, env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left));
+    background: rgba(6, 8, 11, 0.78);
+}
+
+.resume-viewer {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    width: min(100%, 980px);
+    height: min(88vh, 900px);
+    height: min(88dvh, 900px);
+    min-height: 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+}
+
+.resume-viewer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.resume-viewer-header h2 {
+    margin: 0;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.resume-viewer-close {
+    display: grid;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    place-items: center;
+    background: var(--surface-muted);
+    color: var(--text);
+    cursor: pointer;
+}
+
+.resume-viewer-clo  se:hover,
+.resume-viewer-close:focus-visible {
+    border-color: rgba(231, 33, 26, 0.55);
+    background: rgba(245, 197, 66, 0.1);
+    outline: none;
+}
+
+.resume-viewer-document {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    border: 0;
+    background: #ffffff;
+}
+
 @keyframes panelSlideForward {
     from {
         opacity: 0;
@@ -478,6 +545,11 @@
 
     .panel-heading h2 {
         font-size: 1.7rem;
+    }
+
+    .resume-viewer {
+        height: min(94vh, 900px);
+        height: min(94dvh, 900px);
     }
 
     .profile-card,
@@ -587,6 +659,22 @@
 
     .contact-socials {
         grid-template-columns: 1fr;
+    }
+
+    .resume-viewer-backdrop {
+        padding: 0;
+    }
+
+    .resume-viewer {
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        border: 0;
+        border-radius: 0;
+    }
+
+    .resume-viewer-header {
+        padding: max(0.8rem, env(safe-area-inset-top)) 1rem 0.8rem;
     }
 }
 

@@ -1,10 +1,19 @@
 export const workExperiences = [
     {
+        role: 'Freelance',
+        period: 'June 2026 - Present',
+        summary: 'Freelance work contributing to a company  web applicaton featuring responsive user frontend interfaces',
+        stack: ['Duda', 'Figma', 'HTML', 'CSS', 'JavaScript', 'Trello'],
+        highlights: [
+            'Built and refined responsive frontend views and data-heavy application.'
+        ],
+    },
+    {
         role: 'GIS and Frontend Developer',
         organization: 'BaseUp Labs',
         period: 'March 2026 - June 2026',
         summary: 'Contributed to a government‑agency web application featuring map‑driven workflows, responsive user frontend interfaces, and backend‑integrated data services',
-        stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'FastAPI', 'SQLAlchemy', 'PostgreSQL', 'Python', 'GIS'],
+        stack: ['Next.js', 'Tailwind CSS', 'Python', 'FastAPI', 'SQLAlchemy', 'PostgreSQL', 'Alembic'],
         highlights: [
             'Built and refined responsive frontend views for a GIS and data-heavy application.',
             'Supported integration points for a Python backend using FastAPI with SQLAlchemy.',
